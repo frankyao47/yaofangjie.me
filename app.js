@@ -1,9 +1,22 @@
-var http = require('http');
+var koa = require('koa');
+var router = require('koa-router')();
 
-var server = http.createServer(function(req, res) {
-	res.statusCode = 200;
-	res.setHeader('Content-Type', 'text/plain');
-	res.end('Hello world');
-});
+router
+    .get('/', function *(next) {
+        this.body = 'Under construction';
+    })
+    .get('/:query', function *(next) {
+        this.body = 'Hello, your query string is ' + this.params.query;
+    })
 
-server.listen(3000);
+var app = koa();
+
+app.name = 'yaofangjie.me';
+app.env = 'development';
+
+app
+    .use(router.routes())
+    .use(router.allowedMethods());
+
+
+app.listen(3000);

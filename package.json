@@ -1,0 +1,28 @@
+{
+  "name": "yaofangjie.me",
+  "description": "yaofangjie's website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/frankyao47/yaofangjie.me"
+  },
+  "main": "app.js",
+  "files": [
+    "lib"
+  ],
+  "author": "Frank Yao <frankyao47@gmail.com>",
+  "version": "0.1.0",
+  "keywords": [
+    "koa"
+  ],
+  "dependencies": {
+    "koa": "^1.2.0",
+    "koa-router": "^5.4.0"
+  },
+  "devDependencies": {
+  
+  },
+  "engines": {
+    "node": "> 0.12"
+  },
+  "license": "MIT"
+}
