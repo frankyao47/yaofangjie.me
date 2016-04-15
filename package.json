@@ -15,7 +15,8 @@
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "passport": "^0.3.2"
+    "passport": "^0.3.2",
+    "path": "^0.12.7"
   },
   "devDependencies": {},
   "engines": {
