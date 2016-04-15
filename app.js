@@ -1,22 +1,18 @@
-var koa = require('koa');
-var router = require('koa-router')();
+var express = require('express');
+var blog = require('./router/blog.js');
+var login = require('./router/login.js')
 
-router
-    .get('/', function *(next) {
-        this.body = 'Under construction';
-    })
-    .get('/:query', function *(next) {
-        this.body = 'Hello, your query string is ' + this.params.query;
-    })
+var app = express();
 
-var app = koa();
+app.set('view engine', 'ejs'); //use ejs(js syntax) as template engine, render() will search views directory
 
-app.name = 'yaofangjie.me';
-app.env = 'development';
+app.use('/views', express.static(__dirname + '/views')); //views
+app.use('/static', express.static(__dirname + '/static')); //static resources
+app.use('/blog', blog);
+app.use('/admin', login);
 
-app
-    .use(router.routes())
-    .use(router.allowedMethods());
-
+app.get('/', function(req, res) {
+    res.render('index');
+})
 
 app.listen(3000);

@@ -6,21 +6,18 @@
     "url": "https://github.com/frankyao47/yaofangjie.me"
   },
   "main": "app.js",
-  "files": [
-    "lib"
-  ],
   "author": "Frank Yao <frankyao47@gmail.com>",
   "version": "0.1.0",
   "keywords": [
-    "koa"
+    "node",
+    "express"
   ],
   "dependencies": {
-    "koa": "^1.2.0",
-    "koa-router": "^5.4.0"
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "passport": "^0.3.2"
   },
-  "devDependencies": {
-  
-  },
+  "devDependencies": {},
   "engines": {
     "node": "> 0.12"
   },
