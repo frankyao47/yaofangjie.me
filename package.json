@@ -15,9 +15,10 @@
   "dependencies": {
     "ejs": "^2.4.1",
     "express": "^4.13.4",
-    "mongoose": "^4.4.12",
+    "mysql": "^2.10.2",
     "passport": "^0.3.2",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "sequelize": "^3.21.0"
   },
   "devDependencies": {},
   "engines": {

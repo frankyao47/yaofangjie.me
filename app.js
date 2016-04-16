@@ -1,13 +1,11 @@
 var express = require('express');
 var path = require('path');
-var mongoose = require('mongoose');
 
 var config = require('./config.js'); //config file
 var index = require('./router/index.js');
 var blog = require('./router/blog.js');
 var login = require('./router/login.js');
 
-mongoose.connect(config.db.address);
 var app = express();
 
 

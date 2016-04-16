@@ -1,5 +1,5 @@
 var express = require('express');
-var db = require('../mongo.js');
+var db = require('../mysql.js');
 
 var router = express.Router();
 
