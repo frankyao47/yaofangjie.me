@@ -16,7 +16,7 @@ var User = sequelize.define('user', {
     name: { type: Sequelize.STRING, allowNull: false },
     email: { type: Sequelize.STRING, allowNull: false },
     password: { type: Sequelize.STRING, allowNull: false },
-    is_admin: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false },
+    is_admin: { type: Sequelize.BOOLEAN, defaultValue: false },
 }, {
     freezeTableName: true, //disable the modifaction of table names
     timestamps: false //not add updatedAt & createdAt attributes
@@ -32,9 +32,10 @@ var Tip = sequelize.define('tip', {
 
 var Blog = sequelize.define('blog', {
     id: { type: Sequelize.INTEGER, allowNull: false, primaryKey: true, autoIncrement: true },
+    title: { type: Sequelize.TEXT, allowNull: false },
     content: { type: Sequelize.TEXT, allowNull: false  },
-    brief: {type: Sequelize.TEXT, allowNull: false  },
-    read_num: {type: Sequelize.INTEGER, allowNull: false}
+    brief: { type: Sequelize.TEXT, allowNull: false  },
+    read_num: { type: Sequelize.INTEGER, defaultValue: 0 }
 }, {
     freezeTableName: true
 });
