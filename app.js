@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'static'))); //static resources
 
 //router
 app.use('/', index);
-app.use('/blog', blog);
+app.use('/blog', blog)
 app.use('/admin', login);
 
 
